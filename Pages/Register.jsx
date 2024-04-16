@@ -1,39 +1,44 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
-
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoIosEyeOff } from "react-icons/io";
 import { toast } from "react-toastify";
-import auth from "../firebase.config";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../src/Providers/AuthProvider";
 
 const Register = () => {
 
-    const [length,setLength]=useState('');
+
+  const {createUser,updateUserProfile} =useContext(AuthContext);
     const[visible,setVisible]=useState(false);
-
-    const validation=(e)=>
-    {
-        setLength(e.target.value.length);
-    }
-
+    const navigate=useNavigate();
 
     const handleRegister=(e) => {
         e.preventDefault();
-        const email=e.target.email.value;
-        const password=e.target.password.value;
-        const accepted=e.target.check.checked;
-        console.log('submitted', email,password);
-        if(length<6)
-        {
-            toast.warning('Password must be at least 6 characters');
-            return;
-        }
-        if(!accepted)
-        {
-            toast.error("Please accept the terms and conditions");
-            return;
-        }
+        const form = new FormData(e.currentTarget);
+        const email=form.get('email');
+        const password=form.get('password');
+        const name=form.get('name');
+        const photo=form.get('photo');
+
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      toast.error('Password must be at least 6 characters and contain at least one uppercase and one lowercase letter.');
+      return;
+    }
+
+        createUser(email,password)
+        .then(res=>{console.log(res.user)
+          updateUserProfile(name,photo)
+          .then(()=>{
+
+             toast.success('Registered Successfully');
+             window.location.reload();
+
+          })
+          navigate('/');
+          
+        })
+        .catch(err=>{console.error(err)})
         
     };
     return (
@@ -56,7 +61,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Photo</span>
           </label>
-          <input type="text" placeholder="Your Photo URL" name="name" className="input input-bordered" required />
+          <input type="text" placeholder="Your Photo URL" name="photo" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -69,22 +74,9 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <div className="relative">
-          <input type={visible? "text":"password"} onChange={validation} name="password" placeholder="Password" className="input input-bordered w-full" required />
+          <input type={visible? "text":"password"}  name="password" placeholder="Password" className="input input-bordered w-full" required />
           
           <span className="absolute text-xl  right-1 top-[50%] -translate-y-[50%] cursor-pointer" onClick={()=>{setVisible(!visible)}}>{visible? <IoIosEyeOff /> : <IoEye />}</span>
-          </div>
-          
-          <div className="flex items-center justify-between w-full">
-          {
-            length<6 &&length>0 && <p className=" text-sm  text-end"><span className="text-red-600"> Weak</span></p>
-          }
-          {
-            length>=6 &&  length<8 && <p className=" text-sm text-end"> <span className="text-yellow-500"> Good</span></p>
-          }
-          {
-            length>=8 && <p className=" text-sm  text-end"> <span className="text-green-500"> Strong</span></p>
-          }
-          
           </div>
 
         </div>
