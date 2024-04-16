@@ -1,0 +1,106 @@
+{
+  "luxury_properties": [
+    {
+      "id": 1,
+      "estate_title": "Oceanfront Penthouse",
+      "segment_name": "Penthouse",
+      "description": "Stunning penthouse with panoramic views of the ocean. Modern design, spacious living areas, and luxurious amenities.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "3,500 sq ft",
+      "location": "Miami Beach, FL",
+      "facilities": ["Spa", "Private Terrace", "Gourmet Kitchen"],
+      "image": "https://i.ibb.co/9WsWKT8/miami.jpg",
+      "preview_img":[
+        "https://i.ibb.co/nwvDBR8/miami3.jpg",
+        "https://i.ibb.co/Wp9y8rM/miami2.jpg",
+        "https://i.ibb.co/ZdDBtPJ/miami1.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "estate_title": "Private Beach Villa",
+      "segment_name": "Villa",
+      "description": "Exquisite villa nestled on a private beach. Impeccable craftsmanship, infinity pool, and lush tropical gardens.",
+      "price": "$8,500,000",
+      "status": "sale",
+      "area": "6,000 sq ft",
+      "location": "Maui, HI",
+      "facilities": ["Beach Access", "Home Theater", "Fitness Center"],
+      "image": "https://i.ibb.co/C13gT2h/maui.jpg",
+      "preview_img":[
+        "https://i.ibb.co/6yLXX8p/maui3.jpg",
+        "https://i.ibb.co/W0T47vH/maui2.jpg",
+        "https://i.ibb.co/qY9dPKq/maui1.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "estate_title": "Luxury Resort Retreat",
+      "segment_name": "Resort",
+      "description": "Exclusive resort offering unparalleled luxury and privacy. Spa, multiple restaurants, and direct access to pristine beaches.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "25 acres",
+      "location": "Maldives",
+      "facilities": ["Private Villas", "Tennis Courts", "Water Sports Center"],
+      "image": "https://i.ibb.co/Yhn3mKP/mal.jpg",
+      "preview_img":[
+        "https://i.ibb.co/CmKJsXG/mal3.jpg",
+        "https://i.ibb.co/fnyCXJR/mal2.jpg",
+        "https://i.ibb.co/P6XDqYK/mal1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "estate_title": "Mansion on Private Island",
+      "segment_name": "Mansion",
+      "description": "Magnificent mansion situated on a secluded private island. Opulent interiors, expansive outdoor spaces, and breathtaking views.",
+      "price": "$15,000,000",
+      "status": "rent",
+      "area": "10,000 sq ft",
+      "location": "French Polynesia",
+      "facilities": ["Helipad", "Infinity Pool", "Wine Cellar"],
+      "image": "https://i.ibb.co/pbhsSzC/french.jpg",
+      "preview_img":[
+        "https://i.ibb.co/VB8gchy/french1.jpg",
+        "https://i.ibb.co/1sSvr1c/french2.jpg",
+        "https://i.ibb.co/XpHW7Bk/french3.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "estate_title": "Beachfront Luxury Resort",
+      "segment_name": "Resort",
+      "description": "Five-star luxury resort located directly on the beach. Elegant suites, gourmet dining, and world-class spa facilities.",
+      "price": "$30,000,000",
+      "status": "rent",
+      "area": "15 acres",
+      "location": "Bora Bora",
+      "facilities": ["Beachfront Cabanas", "Yacht Marina", "Helicopter Pad"],
+      "image": "https://i.ibb.co/Y3vNYM5/bora1.jpg",
+      "preview_img": [
+        "https://i.ibb.co/1QRF8D6/bora.jpg",
+        "https://i.ibb.co/jRgZbLc/bora2.jpg",
+        "https://i.ibb.co/9ZL3ZQD/bora3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "estate_title": "Seaside Mansion",
+      "segment_name": "Mansion",
+      "description": "Grand mansion overlooking the sea. Impeccable design, private beach access, and extensive entertainment spaces.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "8,000 sq ft",
+      "location": "Amalfi Coast, Italy",
+      "facilities": ["Infinity Pool", "Home Theater", "Gardens"],
+      "image": "https://i.ibb.co/b2FbScw/Amalfi-Coast-Italy.jpg",
+      "preview_img": [
+        "https://i.ibb.co/dBdtbck/italy1.jpg",
+        "https://i.ibb.co/5ndn8dj/italy2.jpg",
+        "https://i.ibb.co/bbP2XzL/italy3.jpg"
+      ]
+    }
+  ]
+}
