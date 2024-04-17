@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:"/login", element:<Login></Login>
       },
-      {path:"/update",element:<UpdateProfile></UpdateProfile>},
+      {path:"/update",element:<PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>},
       {
         path:"/foryou",element:<PrivateRoutes><ForYou></ForYou></PrivateRoutes>,loader:()=>fetch('/data.json')
       }
