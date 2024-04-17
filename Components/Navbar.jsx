@@ -1,16 +1,17 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import 'animate.css';
 import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
+    const navigate=useNavigate();
     console.log(user?.photoURL);
     const handleSignOut=()=>
     {
       logOut() 
-      .then()
+      .then(()=>{navigate('/')})
       .catch()
 
     }
@@ -25,6 +26,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><NavLink to={'/'}>Home</NavLink></li>
       {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
+      {user?   <li><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
 
       </ul>
     </div>
@@ -34,6 +36,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
     <li className="mr-2"><NavLink to={'/'} >Home</NavLink></li>
     {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
+    {user?   <li><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
     </ul>
   </div>
   <div className="navbar-end">

@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import EstateDetails from "../Components/Estates/EstateDetails";
 import PrivateRoutes from "./Routes/PrivateRoutes";
+import UpdateProfile from "../Pages/UpdateProfile";
 AOS.init();
 const router = createBrowserRouter([
   {
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
       { path: "/register", element: <Register></Register> },
       {
         path:"/login", element:<Login></Login>
-      }
+      },
+      {path:"/update",element:<UpdateProfile></UpdateProfile>}
     ],
   },
 ]);
