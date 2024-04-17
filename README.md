@@ -1,11 +1,11 @@
 # PremierResX
 
-Check out the live site [here](https://premierresx.firebaseapp.com/)
+Check out the live site [here](https://premierresx.web.app/)
 
 ## Features and Characteristics
 
 - **User Authentication**: Users can register and log in using their email and password. Additionally, authentication is provided via GitHub and Google login using Firebase.
-- **Profile Management**: Users can update their profile information, including name, email, and profile picture.
+- **Profile Management**: Users can update their profile information, including name, and profile picture.
 - **Private Routes**: Certain sections of the website, such as the "For You" section and estate detail pages, are private routes accessible only to logged-in users.
 - **Real Estate Listings**: The homepage displays six real estate listings to all website visitors, providing a glimpse of available properties.
 - **404 Error Page**: A custom 404 error page is implemented to enhance user experience when encountering page not found errors.
