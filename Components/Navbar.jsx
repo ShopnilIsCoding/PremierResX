@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
-
+import 'animate.css';
 const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
@@ -13,7 +13,7 @@ const Navbar = () => {
 
     }
     return (
-        <div className="sticky z-50 top-0 glass shadow-xl">
+        <div className="sticky z-50 top-0 glass shadow-xl animate__animated animate__fadeIn">
             <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown">

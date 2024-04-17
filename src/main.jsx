@@ -9,13 +9,15 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Login from "../Pages/Login";
 import AuthProvider from "./Providers/AuthProvider";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
     children: [
-      { path: "/", element: <Home></Home> },
+      { path: "/", element: <Home></Home> ,loader:()=>fetch('/data.json') },
       { path: "/register", element: <Register></Register> },
       {
         path:"/login", element:<Login></Login>
