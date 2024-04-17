@@ -15,6 +15,11 @@ const UpdateProfile = () => {
         const form = new FormData(e.currentTarget);
         const name=form.get('name');
         const photo=form.get('photo');
+        if(name.length<=0)
+        {
+        toast.error("Please enter your name");
+        return ;
+        }
         updateUserProfile(name,photo)
         .then(()=>{
 
