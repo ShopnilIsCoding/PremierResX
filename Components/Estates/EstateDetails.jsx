@@ -12,10 +12,8 @@ const EstateDetails = () => {
     const {id}=useParams();
     const data=useLoaderData();
     const estateDetails=data.find(estate=>estate.id == id);
-    console.log(estateDetails);
-    console.log(id);
     return (
-        <div className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-between p-2 p-4 border border-gray-400 rounded-xl bg-svg-background bg-no-repeat bg-contain bg-bottom lg:bg-cover">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-between p-4 border border-gray-400 rounded-xl bg-svg-background bg-no-repeat bg-contain bg-bottom lg:bg-cover">
             <div className="lg:w-1/2 p-4 glass rounded-xl"data-aos="flip-up" data-aos-duration="1000">
             <Swiper
         spaceBetween={30}
