@@ -14,11 +14,13 @@ import 'aos/dist/aos.css';
 import EstateDetails from "../Components/Estates/EstateDetails";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import UpdateProfile from "../Pages/UpdateProfile";
+import ErrorElement from "../Pages/ErrorElement";
 AOS.init();
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       { path: "/", element: <Home></Home> ,loader:()=>fetch('/data.json') },
       {path:"/:id",element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,loader:()=>fetch('/data.json')},
