@@ -20,7 +20,7 @@ const Estate = ({estate}) => {
             <p className='flex gap-2 items-center'><FaChartArea className='text-3xl text-yellow-600' /> <span className='text-yellow-600 font-bold'>{estate.area}</span></p>
             <p className='flex gap-2 items-center'><BsBuildingsFill className='text-3xl text-blue-600' /> <span className='text-blue-600 font-bold'>{estate.segment_name}</span></p>
             </div>
-            <div className='flex justify-end mt-2' data-aos="fade-left" data-aos-duration="1500">
+            <div className='flex justify-end mt-2' data-aos="fade-right" data-aos-duration="1500">
             <Link to={`/${estate.id}`}><button className='btn btn-primary btn-outline' > View Details</button></Link>
             </div>
         </div>
