@@ -7,7 +7,7 @@ const Coupon = () => {
         document.getElementById('cpnBtn').innerText = 'Copied!';
     };
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto" data-aos="flip-up" data-aos-duration="1000">
         <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white text-center py-10 px-20 rounded-lg shadow-md relative">
             <img src="/logo.png" className="size-20 mx-auto mb-4 rounded-lg" alt="PremierResX" />
             <h3 className="text-2xl font-semibold mb-4 font-serif">Use this coupon to get 10% off!</h3>
