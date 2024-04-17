@@ -16,8 +16,6 @@ const ForYou = () => {
         const topThree = sortedData.slice(0, 3);
         setTopChoices(topThree);
     };
-
-    // Call filterTopChoices on component mount
     React.useEffect(() => {
         filterTopChoices();
     }, []);
