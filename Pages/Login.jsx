@@ -69,12 +69,12 @@ const Login = () => {
         <button onClick={()=>githubLogin()
         .then(()=>{
             toast.success("Successfully logged in")
-            navigate('/')})} className="btn bg-[#169BE5] border-0"><FaGithub className="text-3xl text-white" /> <span className="text-xl text-white font-semibold">Continue with Github</span>
+            navigate(location?.state? location.state : '/')})} className="btn bg-[#169BE5] border-0"><FaGithub className="text-3xl text-white" /> <span className="text-xl text-white font-semibold">Continue with Github</span>
         </button>
         <button onClick={()=>googleLogin()
         .then(()=>{
             toast.success("Successfully logged in")
-            navigate('/')})} className="btn"><FcGoogle className="text-3xl" /><span className="text-xl font-semibold">Continue with Google</span></button>
+            navigate(location?.state? location.state : '/')})} className="btn"><FcGoogle className="text-3xl" /><span className="text-xl font-semibold">Continue with Google</span></button>
       </div>
       <p className="pl-8 pb-4">Do not have an account ? <span className="link text-primary font-semibold"><Link to={'/register'}>Register</Link></span></p>
     </div>

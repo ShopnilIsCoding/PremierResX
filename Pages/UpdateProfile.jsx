@@ -32,7 +32,9 @@ const UpdateProfile = () => {
         return <Skeleton count={5} />
     }
     if(!user)
-   navigate('/');
+  { 
+    return <Skeleton count={5} />
+    }
     return (
         <div className="bg-svg-background bg-no-repeat bg-contain lg:bg-cover bg-bottom p-4">
             <div className="max-w-lg p-4 mx-auto space-y-2 glass rounded-xl ">
