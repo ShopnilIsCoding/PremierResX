@@ -11,6 +11,8 @@ import Login from "../Pages/Login";
 import AuthProvider from "./Providers/AuthProvider";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import EstateDetails from "../Components/Estates/EstateDetails";
+import PrivateRoutes from "./Routes/PrivateRoutes";
 AOS.init();
 const router = createBrowserRouter([
   {
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
     element: <RootLayout></RootLayout>,
     children: [
       { path: "/", element: <Home></Home> ,loader:()=>fetch('/data.json') },
+      {path:"/:id",element:<PrivateRoutes><EstateDetails></EstateDetails></PrivateRoutes>,loader:()=>fetch('/data.json')},
       { path: "/register", element: <Register></Register> },
       {
         path:"/login", element:<Login></Login>

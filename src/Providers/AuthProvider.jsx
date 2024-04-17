@@ -50,6 +50,7 @@ const AuthProvider = ({children}) => {
 
     const logOut=()=>
     {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -57,7 +58,6 @@ const AuthProvider = ({children}) => {
         const unSubscribe= onAuthStateChanged(auth,currentUser=>{
             console.log("user in the state changed",currentUser);
             SetUser(currentUser);
-            if(currentUser)
             setLoading(false);
         });
         return ()=>{

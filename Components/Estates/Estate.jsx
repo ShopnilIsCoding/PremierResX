@@ -7,7 +7,7 @@ import { BsBuildingsFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 const Estate = ({estate}) => {
 
-    console.log(estate)
+    
     return (
         <div className="glass rounded-xl p-3 space-y-2 " data-aos="zoom-in" 
         data-aos-duration="1000">

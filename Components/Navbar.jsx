@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import 'animate.css';
+import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
+    console.log(user?.photoURL);
     const handleSignOut=()=>
     {
       logOut() 
@@ -38,7 +40,7 @@ const Navbar = () => {
   {user && <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className=" avatar tooltip tooltip-bottom" data-tip={user.displayName}>
         <div className="w-10 rounded-full m-auto" >
-          <img alt="Tailwind CSS Navbar component" src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+          <img alt="Your Profile" src={ user.photoURL } />
         </div>
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
