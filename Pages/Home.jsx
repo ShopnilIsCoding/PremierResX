@@ -9,7 +9,6 @@ import Estates from "../Components/Estates/Estates";
 
 const Home = () => {
     const data =useLoaderData();
-    console.log(data);
     return (
         <>
         <div className="w-full relative animate__animated animate__fadeInUp">

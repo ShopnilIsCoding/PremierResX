@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
     const navigate=useNavigate();
-    console.log(user?.photoURL);
+    
     const handleSignOut=()=>
     {
       logOut() 

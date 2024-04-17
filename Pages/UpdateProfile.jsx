@@ -7,8 +7,6 @@ import { toast } from "react-toastify";
 import {  useNavigate } from "react-router-dom";
 const UpdateProfile = () => {
     const {user,loading,updateUserProfile}=useContext(AuthContext);
-    console.log(user);
-    const navigate=useNavigate();
     const modifyProfile=(e)=>
     {
         e.preventDefault();
