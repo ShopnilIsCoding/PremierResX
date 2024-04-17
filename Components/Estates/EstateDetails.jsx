@@ -8,12 +8,16 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { MdPriceChange } from "react-icons/md";
 import { FaChartArea } from "react-icons/fa";
 import { BsBuildingsFill } from "react-icons/bs";
+import { Helmet } from "react-helmet-async";
 const EstateDetails = () => {
     const {id}=useParams();
     const data=useLoaderData();
     const estateDetails=data.find(estate=>estate.id == id);
     return (
         <div className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-between p-4 border border-gray-400 rounded-xl bg-svg-background bg-no-repeat bg-contain bg-bottom lg:bg-cover">
+            <Helmet>
+                <title>PremierResX | {estateDetails.estate_title}</title>
+            </Helmet>
             <div className="lg:w-1/2 p-4 glass rounded-xl"data-aos="flip-up" data-aos-duration="1000">
             <Swiper
         spaceBetween={30}

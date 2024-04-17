@@ -5,6 +5,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { FaPhotoVideo } from "react-icons/fa";
 import { toast } from "react-toastify";
 import {  useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const UpdateProfile = () => {
     const {user,loading,updateUserProfile}=useContext(AuthContext);
     const modifyProfile=(e)=>
@@ -35,6 +36,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="bg-svg-background bg-no-repeat bg-contain lg:bg-cover bg-bottom p-4">
+          <Helmet>
+            <title>PremierResX | Update</title>
+          </Helmet>
             <div className="max-w-lg p-4 mx-auto space-y-2 glass rounded-xl ">
             
             <label className="input input-bordered flex items-center gap-2 py-8">

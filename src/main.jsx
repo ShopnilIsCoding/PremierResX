@@ -15,6 +15,7 @@ import EstateDetails from "../Components/Estates/EstateDetails";
 import PrivateRoutes from "./Routes/PrivateRoutes";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ErrorElement from "../Pages/ErrorElement";
+import { HelmetProvider } from "react-helmet-async";
 AOS.init();
 const router = createBrowserRouter([
   {
@@ -35,9 +36,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
     <RouterProvider router={router} />
     <ToastContainer />
     </AuthProvider>
+    </HelmetProvider>
+    
   </React.StrictMode>
 );

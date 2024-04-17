@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
 
     const {signIn,googleLogin,githubLogin}=useContext(AuthContext)
@@ -29,6 +30,9 @@ const Login = () => {
 
     return (
         <div className="">
+          <Helmet>
+            <title>PremierResX | Login</title>
+          </Helmet>
             <div className="hero min-h-[90vh] bg-svg-background">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">

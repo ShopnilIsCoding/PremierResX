@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -51,6 +52,9 @@ const Register = () => {
     }
     return (
         <div className="">
+          <Helmet>
+            <title>PremierResX | Register</title>
+          </Helmet>
             <div className="hero min-h-[90vh] bg-svg-background">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">

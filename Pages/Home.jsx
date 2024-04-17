@@ -6,11 +6,15 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import 'animate.css';
 import Estates from "../Components/Estates/Estates";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const data =useLoaderData();
     return (
         <>
+        <Helmet>
+          <title>PremierResX | Home</title>
+        </Helmet>
         <div className="w-full relative animate__animated animate__fadeInUp">
             <div className=" " >
                 <img className="" src="/banner.jpg" alt="" />
