@@ -27,6 +27,7 @@ const Navbar = () => {
       <li><NavLink to={'/'}>Home</NavLink></li>
       {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
       {user?   <li><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
+      {user?   <li><NavLink to={'/foryou'}>For You</NavLink></li> : <></>}
 
       </ul>
     </div>
@@ -36,18 +37,21 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
     <li className="mr-2"><NavLink to={'/'} >Home</NavLink></li>
     {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
-    {user?   <li><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
+    {user?   <li className="mr-2"><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
+    {user?   <li><NavLink to={'/foryou'}>For You</NavLink></li> : <></>}
     </ul>
   </div>
   <div className="navbar-end">
   {user && <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className=" avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+      <div tabIndex={0} role="button" className=" avatar lg:tooltip lg:tooltip-left" data-tip={user.displayName}>
         <div className="w-10 rounded-full m-auto" >
           <img alt="Your Profile" src={ user.photoURL? user.photoURL : '/profile.png'} />
         </div>
       </div>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <li><a >{user.displayName}</a></li>
         <li><a onClick={handleSignOut}>Logout</a></li>
+        
       </ul>
     </div>}
     <div>

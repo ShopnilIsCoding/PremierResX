@@ -4,7 +4,6 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { FaPhotoVideo } from "react-icons/fa";
 import { toast } from "react-toastify";
-import {  useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 const UpdateProfile = () => {
     const {user,loading,updateUserProfile}=useContext(AuthContext);

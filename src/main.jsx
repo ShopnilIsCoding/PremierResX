@@ -16,6 +16,7 @@ import PrivateRoutes from "./Routes/PrivateRoutes";
 import UpdateProfile from "../Pages/UpdateProfile";
 import ErrorElement from "../Pages/ErrorElement";
 import { HelmetProvider } from "react-helmet-async";
+import ForYou from "../Pages/ForYou";
 AOS.init();
 const router = createBrowserRouter([
   {
@@ -29,7 +30,10 @@ const router = createBrowserRouter([
       {
         path:"/login", element:<Login></Login>
       },
-      {path:"/update",element:<UpdateProfile></UpdateProfile>}
+      {path:"/update",element:<UpdateProfile></UpdateProfile>},
+      {
+        path:"/foryou",element:<PrivateRoutes><ForYou></ForYou></PrivateRoutes>,loader:()=>fetch('/data.json')
+      }
     ],
   },
 ]);
