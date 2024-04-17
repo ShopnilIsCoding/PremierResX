@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="animate__animated animate__fadeInUp footer p-10 bg-base-200 text-base-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
   <aside>
     <img src={'/logo.png'} className="size-20" alt="" />
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+    <p >We Fullfill Your Dreams <br /><span className=' font-serif font-black'>&copy; 2024 <span className='bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient'>PremierResX</span>. All Rights Reserved.</span></p>
   </aside> 
   <nav>
     <h6 className="footer-title">Services</h6> 

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import 'animate.css';
-import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
@@ -30,7 +29,7 @@ const Navbar = () => {
 
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl text-2xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">PremierResX</a>
+    <a className="btn btn-ghost  text-2xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">PremierResX</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
