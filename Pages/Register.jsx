@@ -4,11 +4,13 @@ import { IoIosEyeOff } from "react-icons/io";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Register = () => {
 
 
-  const {createUser,updateUserProfile} =useContext(AuthContext);
+  const {createUser,updateUserProfile,loading} =useContext(AuthContext);
     const[visible,setVisible]=useState(false);
     const navigate=useNavigate();
 
@@ -33,14 +35,20 @@ const Register = () => {
 
              toast.success('Registered Successfully');
              window.location.reload();
+             
 
           })
           navigate('/');
-          
+           
         })
         .catch(err=>{console.error(err)})
         
+        
     };
+    if(loading)
+    {
+        return <Skeleton count={15} />
+    }
     return (
         <div className="">
             <div className="hero min-h-[90vh] bg-svg-background">

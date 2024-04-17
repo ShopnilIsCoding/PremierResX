@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
@@ -8,6 +8,7 @@ const Login = () => {
 
     const {signIn,googleLogin,githubLogin}=useContext(AuthContext)
     const navigate =useNavigate();
+    const location=useLocation();
 
     const handleLogin=(e) => {
         e.preventDefault();
@@ -18,7 +19,7 @@ const Login = () => {
         .then( (res)=>
     {
         toast.success("Successfully logged in")
-        navigate('/')
+        navigate(location?.state? location.state : '/')
     })
         .catch(()=>{
             toast.warning('Invalid Credentials')
