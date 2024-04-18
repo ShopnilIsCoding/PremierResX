@@ -17,11 +17,11 @@ const Estate = ({estate}) => {
             <p className='text-xl font-semibold ml-1 text-center'>Estate Name: {estate.estate_title}</p>
             <div className='flex flex-wrap gap-2 justify-around' data-aos="fade-up" data-aos-duration="1500">
             <p className='flex gap-2 items-center'><MdPriceChange className='text-3xl text-green-600' /> <span className='text-green-600 font-bold'>{estate.price}</span></p>
-            <p className='flex gap-2 items-center'><FaChartArea className='text-3xl text-yellow-600' /> <span className='text-yellow-600 font-bold'>{estate.area}</span></p>
+            <p className='flex gap-2 items-center'><FaChartArea className='text-3xl text-red-800' /> <span className='text-red-800 font-bold'>{estate.area}</span></p>
             <p className='flex gap-2 items-center'><BsBuildingsFill className='text-3xl text-blue-600' /> <span className='text-blue-600 font-bold'>{estate.segment_name}</span></p>
             </div>
             <div className='flex justify-end mt-2' data-aos="fade-up" data-aos-duration="1500">
-            <Link to={`/${estate.id}`}><button className='btn btn-primary btn-outline' > View Details</button></Link>
+            <Link to={`/${estate.id}`}><button className='btn btn-secondary btn-outline' > View Details</button></Link>
             </div>
         </div>
     );
