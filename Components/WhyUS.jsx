@@ -54,7 +54,7 @@ const WhyUS = () => {
           </div>
         </div>
       </section>
-      <div className="stats w-full lg:max-w-7xl mx-auto mt-2  shadow lg:absolute lg:z-50 lg:left-1/2 lg:transform lg:-translate-x-1/2 -bottom-20" >
+      <div className="stats w-full lg:max-w-7xl mx-auto mt-2  shadow lg:absolute lg:z-10 lg:left-1/2 lg:transform lg:-translate-x-1/2 -bottom-20" >
         <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-3 items-center justify-between  space-x-4">
             <div className="stat">
