@@ -1,6 +1,11 @@
 
 import { BsSend } from "react-icons/bs";
+import { toast } from "react-toastify";
 const FAQ = () => {
+    const send=()=>
+    {
+        toast.success("Message Sent Successfully");
+    }
     return (
         <div>
             <div className="text-center mt-4">
@@ -24,7 +29,7 @@ const FAQ = () => {
         <input type="text" placeholder="Your question or feedback..." className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
       </div>
       
-      <button className="bg-primary flex justify-center items-center gap-2 text-white px-6 py-2 rounded-lg hover:bg-secondary transition duration-300 "><BsSend /> Send </button>
+      <button onClick={send} className="bg-primary flex justify-center items-center gap-2 text-white px-6 py-2 rounded-lg hover:bg-secondary transition duration-300 "><BsSend /> Send </button>
     </div>
   </div>
 
