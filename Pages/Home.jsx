@@ -19,7 +19,7 @@ const Home = () => {
         </Helmet>
         <div className="flex items-center my-2"><button className="btn btn-secondary">Latest</button>
         <Marquee>
-  {data.map((singleData)=><Link to={`/${singleData.id}`} className="mr-6 text-primary">{singleData.estate_title}</Link>)}
+  {data.map((singleData)=><Link key={singleData.id} to={`/${singleData.id}`} className="mr-6 text-primary">{singleData.estate_title}</Link>)}
 </Marquee>
         </div>
         <div className="w-full relative animate__animated animate__fadeInUp">
@@ -57,8 +57,8 @@ const Home = () => {
     </div>
         </div>
         <div className="my-10 ">
-        <h1 className="text-center text-3xl font-extrabold mb-6" data-aos="zoom-out-right">Discover Our Exclusive Estates</h1>
-        <p className="font-serif text-gray-600 text-center mx-auto mb-4 max-w-[90%] lg:max-w-xl" data-aos="zoom-out-right">Explore our curated collection of luxurious estates around the world. From stunning penthouses with panoramic ocean views to grand mansions overlooking the sea, each property offers unparalleled luxury and breathtaking surroundings. Start your journey to finding your dream home today.</p>
+        <h1 className="text-center text-3xl font-extrabold mb-6" data-aos="zoom-in-down">Discover Our Exclusive Estates</h1>
+        <p className="font-serif text-gray-600 text-center mx-auto mb-4 max-w-[90%] lg:max-w-xl" data-aos="zoom-in-down">Explore our curated collection of luxurious estates around the world. From stunning penthouses with panoramic ocean views to grand mansions overlooking the sea, each property offers unparalleled luxury and breathtaking surroundings. Start your journey to finding your dream home today.</p>
             <Estates data={data}>
 
             </Estates>

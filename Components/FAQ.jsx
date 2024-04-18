@@ -4,10 +4,10 @@ const FAQ = () => {
     return (
         <div>
             <div className="text-center mt-4">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl"data-aos="zoom-out-right">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl"data-aos="zoom-in-down">
             Get Answers and Share Your Thoughts
             </h2>
-            <p className="mt-4 text-lg text-gray-600 font-serif mx-auto lg:max-w-lg"data-aos="zoom-out-right">
+            <p className="mt-4 text-lg text-gray-600 font-serif mx-auto lg:max-w-lg"data-aos="zoom-in-down">
             Have questions about our luxury properties or feedback to share? Use the form below to ask anything you need or provide us with your valuable insights.
             </p>
           </div>
