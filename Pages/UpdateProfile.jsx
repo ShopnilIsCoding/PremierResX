@@ -46,20 +46,25 @@ const UpdateProfile = () => {
             <title>PremierResX | Update</title>
           </Helmet>
             <div className="max-w-lg p-4 mx-auto space-y-2 glass rounded-xl ">
-              <h1 className="text-center text-2xl">Hi <span className="text-primary font-bold font-serif">{user.displayName}</span>!</h1>
-            {user.photoURL && <div className="w-full" ><img src={user.photoURL ? user.photoURL : '/profile.png'} className="rounded-full size-40 mx-auto" alt="" /></div>}
+              <h1 className="text-center text-2xl" data-aos="zoom-out-right" data-aos-duration="500">Hi <span className="text-primary font-bold font-serif">{user.displayName}</span>!</h1>
+            {user.photoURL && <div className="w-full" data-aos="zoom-in" data-aos-duration="500" ><img src={user.photoURL ? user.photoURL : '/profile.png'} className="rounded-full size-40 mx-auto" alt="" /></div>}
             {user.email && <p className="text-center font-semibold font-serif text-primary">{user.email}</p>}
             
             <form onSubmit={modifyProfile}>
-            <label className="input input-bordered flex items-center gap-2 py-8 mb-2">
+            <label className="input input-bordered flex items-center gap-2 py-8 mb-2" data-aos="fade-up"
+     data-aos-duration="600">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" /></svg>
-              <input type="text" className="grow" placeholder="Username" name="name" />
+              <input type="text" className="grow" placeholder="Username" name="name"  />
             </label>
-            <label className="input input-bordered flex items-center gap-2 py-8">
+            <label className="input input-bordered flex items-center gap-2 py-8"data-aos="fade-up"
+     data-aos-duration="800">
             <FaPhotoVideo />
               <input type="text" className="grow" placeholder="PhotoURL" name="photo"/>
             </label>
-            <button className="btn btn-outline btn-primary mt-2 w-full">Update Profile</button>
+            <div data-aos="fade-up"
+     data-aos-duration="1000">
+            <button className="btn btn-outline btn-primary mt-2 w-full" >Update Profile</button>
+            </div>
             </form>
                     </div>
         </div>
