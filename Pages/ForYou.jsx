@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../src/Providers/AuthProvider';
 import Skeleton from 'react-loading-skeleton';
@@ -11,12 +11,18 @@ const ForYou = () => {
     const { user, loading } = useContext(AuthContext);
     const [topChoices, setTopChoices] = useState([]);
    const data=useLoaderData();
-    const filterTopChoices = () => {
-        const sortedData = data.sort((a, b) => a.price - b.price);
-        const topThree = sortedData.slice(0, 3);
-        setTopChoices(topThree);
-    };
-    React.useEffect(() => {
+   const filterTopChoices = () => {
+    const sortedData = data.sort((a, b) => {
+        const priceA = parseFloat(a.price.replace(/[^0-9.-]+/g,""));
+        const priceB = parseFloat(b.price.replace(/[^0-9.-]+/g,""));
+        return priceA - priceB;
+    });
+    const topThree = sortedData.slice(0, 3);
+    console.log(topThree);
+    setTopChoices(topThree);
+};
+
+    useEffect(() => {
         filterTopChoices();
     }, []);
 
