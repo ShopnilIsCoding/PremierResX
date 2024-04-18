@@ -7,15 +7,21 @@ import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 const UpdateProfile = () => {
     const {user,loading,updateUserProfile}=useContext(AuthContext);
+
     const modifyProfile=(e)=>
     {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name=form.get('name');
         const photo=form.get('photo');
-        if(name.length<=0)
+        if(photo.length>200)
         {
-        toast.error("Please enter your name");
+          toast.error("Photo Url is too long");
+          return ;
+        }
+        if(name.length<=0 || photo.length<=0)
+        {
+        toast.error("You must fill both fields");
         return ;
         }
         updateUserProfile(name,photo)
@@ -39,13 +45,12 @@ const UpdateProfile = () => {
             <title>PremierResX | Update</title>
           </Helmet>
             <div className="max-w-lg p-4 mx-auto space-y-2 glass rounded-xl ">
+              <h1 className="text-center text-2xl">Hi <span className="text-primary font-bold font-serif">{user.displayName}</span>!</h1>
+            <div className="w-full" ><img src={user.photoURL ? user.photoURL : '/profile.png'} className="rounded-full size-40 mx-auto" alt="" /></div>
+            {user.email && <p className="text-center font-semibold font-serif text-primary">{user.email}</p>}
             
-            <label className="input input-bordered flex items-center gap-2 py-8">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
-              <input type="text" placeholder="You can't touch this" className="input input-bordered w-full p-2" disabled value={user.email} />
-            </label>
             <form onSubmit={modifyProfile}>
-            <label className="input input-bordered flex items-center gap-2 py-8">
+            <label className="input input-bordered flex items-center gap-2 py-8 mb-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" /></svg>
               <input type="text" className="grow" placeholder="Username" name="name" />
             </label>
