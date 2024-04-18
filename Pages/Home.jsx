@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -9,7 +9,7 @@ import Estates from "../Components/Estates/Estates";
 import { Helmet } from "react-helmet-async";
 import WhyUS from "../Components/WhyUS";
 import FAQ from "../Components/FAQ";
-
+import Marquee from "react-fast-marquee";
 const Home = () => {
     const data =useLoaderData();
     return (
@@ -17,6 +17,11 @@ const Home = () => {
         <Helmet>
           <title>PremierResX | Home</title>
         </Helmet>
+        <div className="flex items-center my-2"><button className="btn btn-secondary">Latest</button>
+        <Marquee>
+  {data.map((singleData)=><Link to={`/${singleData.id}`} className="mr-6 text-primary">{singleData.estate_title}</Link>)}
+</Marquee>
+        </div>
         <div className="w-full relative animate__animated animate__fadeInUp">
             <div className=" " >
                 <img className="" src="/banner.jpg" alt="" />
