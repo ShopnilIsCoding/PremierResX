@@ -24,10 +24,10 @@ const Home = () => {
         </div>
         <div className="w-full relative animate__animated animate__fadeInUp">
             <div className=" " >
-                <img className="" src="/banner.jpg" alt="" />
+                <img className="rounded-xl" src="/banner.jpg" alt="" />
                 
     </div>
-    <div className="absolute top-[50%] w-[40%] p-4 glass -translate-y-[50%]">
+    <div className="absolute top-[50%] w-[40%] p-4 glass rounded-r-xl -translate-y-[50%]">
     <Swiper
         effect={'coverflow'}
         grabCursor={true}

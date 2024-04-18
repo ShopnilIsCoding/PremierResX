@@ -11,7 +11,7 @@ const FAQ = () => {
             Have questions about our luxury properties or feedback to share? Use the form below to ask anything you need or provide us with your valuable insights.
             </p>
           </div>
-            <div className="container mx-auto flex flex-wrap items-start justify-between  mt-3 lg:py-12 lg:px-4 lg:shadow-md border border-base-300 lg:border-base-300 rounded-lg"data-aos="flip-up" data-aos-easing="linear"
+            <div className="container mx-auto flex flex-wrap items-start justify-between  mt-3 lg:py-12 lg:px-4 lg:shadow-md border border-base-300 lg:border-base-300 rounded-lg"data-aos="zoom-in" data-aos-easing="linear"
      data-aos-duration="500">
   {/* Left side - Ask Question */}
   <div className="w-full lg:w-1/3 mb-8 lg:mb-0 h-full">
@@ -31,7 +31,7 @@ const FAQ = () => {
   {/* Right side - FAQ */}
   <div className="w-full lg:w-2/3">
     <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold mb-6 text-primary">Frequently Asked Questions</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-secondary">Frequently Asked Questions</h2>
 
       {/* FAQ items */}
       <div className="accordion">

@@ -54,12 +54,12 @@ const WhyUS = () => {
           </div>
         </div>
       </section>
-      <div className="stats w-full lg:max-w-7xl mx-auto mt-2  shadow lg:absolute lg:z-10 lg:left-1/2 lg:transform lg:-translate-x-1/2 -bottom-20" >
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-3 items-center justify-between  space-x-4">
+      <div className="stats w-full lg:max-w-7xl mx-auto mt-2  shadow lg:absolute lg:z-10 lg:left-1/2 lg:transform lg:-translate-x-1/2 -bottom-20 overflow-scroll" >
+        <div className=" max-w-7xl mx-auto px-1 sm:px-2 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 items-center justify-between  lg:space-x-4">
             <div className="stat">
               <div className="stat-figure text-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className= "hidden lg:inline-block lg:w-8 lh:h-8 lg:stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <div className="stat-title">Total Sales</div>
               <div className="stat-value">$1.5M</div>
@@ -67,7 +67,7 @@ const WhyUS = () => {
             </div>
             <div className="stat">
               <div className="stat-figure text-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="hidden lg:inline-block lg:w-8 lh:h-8 lg:stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
               </div>
               <div className="stat-title">New Clients</div>
               <div className="stat-value">457</div>
@@ -75,7 +75,7 @@ const WhyUS = () => {
             </div>
             <div className="stat">
               <div className="stat-figure text-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="hidden lg:inline-block lg:w-8 lh:h-8 lg:stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
               </div>
               <div className="stat-title">Customer Satisfaction</div>
               <div className="stat-value">95%</div>
