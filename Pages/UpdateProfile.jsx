@@ -46,7 +46,7 @@ const UpdateProfile = () => {
           </Helmet>
             <div className="max-w-lg p-4 mx-auto space-y-2 glass rounded-xl ">
               <h1 className="text-center text-2xl">Hi <span className="text-primary font-bold font-serif">{user.displayName}</span>!</h1>
-            <div className="w-full" ><img src={user.photoURL ? user.photoURL : '/profile.png'} className="rounded-full size-40 mx-auto" alt="" /></div>
+            {user.photoURL && <div className="w-full" ><img src={user.photoURL ? user.photoURL : '/profile.png'} className="rounded-full size-40 mx-auto" alt="" /></div>}
             {user.email && <p className="text-center font-semibold font-serif text-primary">{user.email}</p>}
             
             <form onSubmit={modifyProfile}>
