@@ -14,11 +14,11 @@ const UpdateProfile = () => {
         const form = new FormData(e.currentTarget);
         const name=form.get('name');
         const photo=form.get('photo');
-        if(photo.length>200)
-        {
-          toast.error("Photo Url is too long");
-          return ;
-        }
+        // if(photo.length>300)
+        // {
+        //   toast.error("Photo Url is too long");
+        //   return ;
+        // }
         if(name.length<=0 || photo.length<=0)
         {
         toast.error("You must fill both fields");
@@ -30,6 +30,7 @@ const UpdateProfile = () => {
             toast.success('profile updated successfully');
             window.location.reload();
          })
+         .catch(()=>{toast.error('Error updating profile!Try later')});
     }
     if(loading)
     {
