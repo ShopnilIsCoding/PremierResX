@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/Providers/AuthProvider";
 import 'animate.css';
-import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
 
     const {user,logOut}=useContext(AuthContext);
@@ -24,21 +23,37 @@ const Navbar = () => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <li><NavLink to={'/'}>Home</NavLink></li>
-      {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
-      {user?   <li><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
-      {user?   <li><NavLink to={'/foryou'}>For You</NavLink></li> : <></>}
+      <li><NavLink to={'/'} className={({ isActive}) =>
+    isActive ? "border-b-2 border-b-primary  p-2 text-primary font-semibold text-center delay-75 transition-all" : " p-2 text-[#131313CC]"
+  }>Home</NavLink></li>
+      {user? <></> : <li><NavLink to={'/register'} className={({ isActive}) =>
+    isActive ? "border-b-2 border-b-primary  p-2 text-primary font-semibold text-center delay-75 transition-all" : " p-2 text-[#131313CC]"
+  } >Register</NavLink></li>}
+      {user?   <li><NavLink to={'/update'} className={({ isActive}) =>
+    isActive ? "border-b-2 border-b-primary  p-2 text-primary font-semibold text-center delay-75 transition-all" : " p-2 text-[#131313CC]"
+  }>Update Profile</NavLink></li> : <></>}
+      {user?   <li><NavLink to={'/foryou'} className={({ isActive}) =>
+    isActive ? "border-b-2 border-b-primary  p-2 text-primary font-semibold text-center delay-75 transition-all" : " p-2 text-[#131313CC]"
+  }>For You</NavLink></li> : <></>}
 
       </ul>
     </div>
     <a className="btn btn-ghost  text-2xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">PremierResX</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-    <li className="mr-2"><NavLink to={'/'} >Home</NavLink></li>
-    {user? <></> : <li><NavLink to={'/register'}>Register</NavLink></li>}
-    {user?   <li className="mr-2"><NavLink to={'/update'}>Update Profile</NavLink></li> : <></>}
-    {user?   <li><NavLink to={'/foryou'}>For You</NavLink></li> : <></>}
+    <ul className="menu-horizontal px-1">
+    <li className="mr-4"><NavLink to={'/'} className={({ isActive}) =>
+    isActive ? "border-y-2 border-y-primary  p-2 text-primary font-semibold text-center delay-100 ease-in transition-all" : "border-x-2 transition-all delay-100 ease-out border-x-secondary p-2 text-[#131313CC]"
+  }>Home</NavLink></li>
+    {user? <></> : <li><NavLink to={'/register'} className={({ isActive}) =>
+    isActive ? "border-y-2 border-y-primary  p-2 text-primary font-semibold text-center delay-100 ease-in transition-all" : "border-x-2 transition-all delay-100 ease-out border-x-secondary p-2 text-[#131313CC]"
+  }>Register</NavLink></li>}
+    {user?   <li className="mr-4"><NavLink to={'/update'} className={({ isActive}) =>
+    isActive ? "border-y-2 border-y-primary  p-2 text-primary font-semibold text-center delay-100 ease-in transition-all" : "border-x-2 transition-all delay-100 ease-out border-x-secondary p-2 text-[#131313CC]"
+  }>Update Profile</NavLink></li> : <></>}
+    {user?   <li><NavLink to={'/foryou'} className={({ isActive}) =>
+    isActive ? "border-y-2 border-y-primary  p-2 text-primary font-semibold text-center delay-100 ease-in transition-all" : "border-x-2 transition-all delay-100 ease-out border-x-secondary p-2 text-[#131313CC]"
+  }>For You</NavLink></li> : <></>}
     </ul>
   </div>
   <div className="navbar-end">
